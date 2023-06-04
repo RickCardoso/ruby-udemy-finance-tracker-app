@@ -1,1 +1,11 @@
 <h1>Home</h1>
+
+<h3>Primary</h3>
+<%= render(ButtonComponent.new(type: :primary)) do %>
+  Submit
+<% end %>
+
+<h3>Secondary</h3>
+<%= render(ButtonComponent.new(type: :secondary)) do %>
+  Submit
+<% end %>
