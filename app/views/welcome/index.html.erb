@@ -1,3 +1,6 @@
 <h1>Home</h1>
 
 <%= link_to "Sign out", :destroy_user_session, data: { turbo_method: :delete } %>
+<%= render(ButtonComponent.new(type: :secondary, as: :link)) do %>
+  Sign out
+<% end %>

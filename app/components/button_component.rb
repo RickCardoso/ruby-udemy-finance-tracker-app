@@ -30,6 +30,7 @@ class ButtonComponent < ViewComponent::Base
     h-10
     whitespace-nowrap
     font-bold
+    inline-block
   ].freeze
 
   BUTTON_TYPE_MAPPINGS = {
@@ -37,8 +38,14 @@ class ButtonComponent < ViewComponent::Base
     secondary: SECONDARY_CLASSES
   }.freeze
 
-  def initialize(type: :primary)
+  BUTTON_AS_MAPPING = {
+    button: "button",
+    link: "a"
+  }
+
+  def initialize(type: :primary, as: :button)
     @type = type
+    @tag = BUTTON_AS_MAPPING[as]
   end
 
   def classes
