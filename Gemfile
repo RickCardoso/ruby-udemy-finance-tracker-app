@@ -75,3 +75,5 @@ group :test do
 end
 
 gem "view_component", "~> 3.1"
+
+gem "devise", "~> 4.9"
